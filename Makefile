@@ -6,10 +6,10 @@ DFU_PORT         ?= /dev/ttyACM0
 
 
 SDK_ROOT ?= /home/user/devel/esl-nsdk
-PROJ_DIR ?= ../..
+PROJ_DIR ?= .
 
 $(OUTPUT_DIRECTORY)/nrf52840_xxaa.out: \
-  LINKER_SCRIPT  := blinky_gcc_nrf52.ld
+  LINKER_SCRIPT  := pca10059/blinky_gcc_nrf52.ld
 
 # Source files common to all targets
 SRC_FILES += \
@@ -42,7 +42,7 @@ INC_FOLDERS += \
   $(SDK_ROOT)/components/libraries/strerror \
   $(SDK_ROOT)/components/toolchain/cmsis/include \
   $(SDK_ROOT)/components/libraries/util \
-  ../config \
+  $(PROJ_DIR)/pca10059/config \
   $(SDK_ROOT)/components/libraries/balloc \
   $(SDK_ROOT)/components/libraries/ringbuf \
   $(SDK_ROOT)/modules/nrfx/hal \
