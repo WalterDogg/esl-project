@@ -2610,21 +2610,21 @@ LOAD linker stubs
  .comment       0x00000000000000a7       0x4f /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
  .comment       0x00000000000000a7       0x5a /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/crtend.o
 
-.debug_line     0x0000000000000000     0x3152
+.debug_line     0x0000000000000000     0x313d
  .debug_line    0x0000000000000000       0x87 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
  .debug_line    0x0000000000000087       0x91 _build/nrf52840_xxaa/gcc_startup_nrf52840.S.o
  .debug_line    0x0000000000000118     0x105e _build/nrf52840_xxaa/boards.c.o
- .debug_line    0x0000000000001176      0xb5e _build/nrf52840_xxaa/main.c.o
- .debug_line    0x0000000000001cd4      0x7d6 _build/nrf52840_xxaa/system_nrf52840.c.o
- .debug_line    0x00000000000024aa      0x14a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-atexit.o)
- .debug_line    0x00000000000025f4      0x16c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
- .debug_line    0x0000000000002760       0xd7 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-fini.o)
- .debug_line    0x0000000000002837       0xe3 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
- .debug_line    0x000000000000291a      0x10d /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
- .debug_line    0x0000000000002a27      0x26b /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
- .debug_line    0x0000000000002c92      0x228 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-__atexit.o)
- .debug_line    0x0000000000002eba      0x22a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-__call_atexit.o)
- .debug_line    0x00000000000030e4       0x6e /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
+ .debug_line    0x0000000000001176      0xb49 _build/nrf52840_xxaa/main.c.o
+ .debug_line    0x0000000000001cbf      0x7d6 _build/nrf52840_xxaa/system_nrf52840.c.o
+ .debug_line    0x0000000000002495      0x14a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-atexit.o)
+ .debug_line    0x00000000000025df      0x16c /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
+ .debug_line    0x000000000000274b       0xd7 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-fini.o)
+ .debug_line    0x0000000000002822       0xe3 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+ .debug_line    0x0000000000002905      0x10d /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
+ .debug_line    0x0000000000002a12      0x26b /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+ .debug_line    0x0000000000002c7d      0x228 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-__atexit.o)
+ .debug_line    0x0000000000002ea5      0x22a /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-__call_atexit.o)
+ .debug_line    0x00000000000030cf       0x6e /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
 
 .debug_info     0x0000000000000000     0x8d96
  .debug_info    0x0000000000000000       0x26 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
@@ -2688,33 +2688,33 @@ LOAD linker stubs
  .debug_aranges
                 0x0000000000000218       0x20 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
 
-.debug_str      0x0000000000000000    0x8f28a
+.debug_str      0x0000000000000000    0x8f275
  .debug_str     0x0000000000000000       0x98 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
  .debug_str     0x0000000000000098       0x6d _build/nrf52840_xxaa/gcc_startup_nrf52840.S.o
                                          0x79 (size before relaxing)
  .debug_str     0x0000000000000105    0x86418 _build/nrf52840_xxaa/boards.c.o
                                       0x877bb (size before relaxing)
- .debug_str     0x000000000008651d      0x10d _build/nrf52840_xxaa/main.c.o
-                                      0x87098 (size before relaxing)
- .debug_str     0x000000000008662a     0x831f _build/nrf52840_xxaa/system_nrf52840.c.o
+ .debug_str     0x000000000008651d       0xf8 _build/nrf52840_xxaa/main.c.o
+                                      0x87083 (size before relaxing)
+ .debug_str     0x0000000000086615     0x831f _build/nrf52840_xxaa/system_nrf52840.c.o
                                       0x7e731 (size before relaxing)
- .debug_str     0x000000000008e949      0x1ee /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-atexit.o)
+ .debug_str     0x000000000008e934      0x1ee /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-atexit.o)
                                         0x62d (size before relaxing)
- .debug_str     0x000000000008eb37       0x6f /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
+ .debug_str     0x000000000008eb22       0x6f /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-exit.o)
                                         0x62e (size before relaxing)
- .debug_str     0x000000000008eba6       0xcc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-fini.o)
+ .debug_str     0x000000000008eb91       0xcc /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-fini.o)
                                         0x1ff (size before relaxing)
- .debug_str     0x000000000008ec72       0xa0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+ .debug_str     0x000000000008ec5d       0xa0 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
                                         0x5e2 (size before relaxing)
- .debug_str     0x000000000008ed12       0x90 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
+ .debug_str     0x000000000008ecfd       0x90 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-init.o)
                                         0x229 (size before relaxing)
- .debug_str     0x000000000008eda2      0x314 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
+ .debug_str     0x000000000008ed8d      0x314 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-memset.o)
                                         0x90f (size before relaxing)
- .debug_str     0x000000000008f0b6       0x82 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-__atexit.o)
+ .debug_str     0x000000000008f0a1       0x82 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-__atexit.o)
                                         0x680 (size before relaxing)
- .debug_str     0x000000000008f138       0x49 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-__call_atexit.o)
+ .debug_str     0x000000000008f123       0x49 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-__call_atexit.o)
                                         0x62b (size before relaxing)
- .debug_str     0x000000000008f181      0x109 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
+ .debug_str     0x000000000008f16c      0x109 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libnosys.a(_exit.o)
                                         0x19f (size before relaxing)
 
 .debug_loc      0x0000000000000000     0x1d8f

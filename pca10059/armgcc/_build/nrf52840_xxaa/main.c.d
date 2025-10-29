@@ -1,4 +1,4 @@
-_build/nrf52840_xxaa/main.c.o: /home/user/src/esl-project/main.c \
+_build/nrf52840_xxaa/main.c.o: ../../main.c \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdbool.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h \
  /home/user/devel/esl-nsdk/components/libraries/delay/nrf_delay.h \
