@@ -1,110 +1,58 @@
+#include "led_control.h"
+#include "pwm_control.h"
+#include "button_handler.h"
 #include <stdbool.h>
 #include <stdint.h>
-#include "nrf_delay.h"
-#include "nrf_gpio.h"
+#include "nrf_drv_clock.h"
 
-#define DEVICE_ID 6587
-
-#define LED_PIN NRF_GPIO_PIN_MAP(0, 6)
-#define LED_R_PIN NRF_GPIO_PIN_MAP(0, 8)
-#define LED_G_PIN NRF_GPIO_PIN_MAP(1, 9)
-#define LED_B_PIN NRF_GPIO_PIN_MAP(0, 12)
-
-#define BUTTON_PIN NRF_GPIO_PIN_MAP(1, 6)
-
-const int digit1 = DEVICE_ID / 1000;
-const int digit2 = (DEVICE_ID / 100) % 10;
-const int digit3 = (DEVICE_ID / 10) % 10;
-const int digit4 = DEVICE_ID % 10;
-
-bool is_button_press()
+/**@brief Function starting the internal LFCLK oscillator.
+ *
+ * @details This is needed by RTC1 which is used by the Application Timer
+ *          (When SoftDevice is enabled the LFCLK is always running and this is not needed).
+ */
+void lfclk_request(void)
 {
-    return nrf_gpio_pin_read(BUTTON_PIN) == 0;
+    ret_code_t err_code = nrf_drv_clock_init();
+    APP_ERROR_CHECK(err_code);
+    nrf_drv_clock_lfclk_request(NULL);
 }
 
-
-void blink_led(int pin)
+void blinky_on_button_click(void)
 {
-    nrf_gpio_pin_write(pin, 0);
-
-    for (int i = 0; i < 10; i++)
-    {
-        if (!is_button_press())
-        {
-            return;
-        }
-        nrf_delay_ms(100);
-    }
-
-    nrf_gpio_pin_write(pin, 1);
 }
 
-void init_led_arr(int *led_arr, int len_led_arr)
+void blinky_on_button_double_click(void)
 {
-    int index = 0;
-
-    for (int i = 0; i < digit1; i++)
-    {
-        led_arr[index++] = LED_PIN;
-    }
-    for (int i = 0; i < digit2; i++)
-    {
-        led_arr[index++] = LED_R_PIN;
-    }
-    for (int i = 0; i < digit3; i++)
-    {
-        led_arr[index++] = LED_G_PIN;
-    }
-    for (int i = 0; i < digit4; i++)
-    {
-        led_arr[index++] = LED_B_PIN;
-    }
+    set_current_mode();
 }
 
-void init_pin()
+void blinky_on_button_long_press(void)
 {
-    nrf_gpio_cfg_output(LED_PIN);
-    nrf_gpio_cfg_output(LED_R_PIN);
-    nrf_gpio_cfg_output(LED_G_PIN);
-    nrf_gpio_cfg_output(LED_B_PIN);
-    nrf_gpio_cfg_input(BUTTON_PIN, NRF_GPIO_PIN_PULLUP);
+    update_duty_cycle_RGB();
 }
-
-void leds_off()
+void init_helper(void)
 {
-    nrf_gpio_pin_write(LED_PIN, 1);
-    nrf_gpio_pin_write(LED_R_PIN, 1);
-    nrf_gpio_pin_write(LED_G_PIN, 1);
-    nrf_gpio_pin_write(LED_B_PIN, 1);
+    button_pin_init();
+    button_timers_init();
+    button_event_init(blinky_on_button_click, blinky_on_button_double_click, blinky_on_button_long_press);
+
+    pwm_timer_init();
+    pwm_controller_init();
 }
 
 int main(void)
 {
-    init_pin();
+    lfclk_request();
 
-    const int len_led_arr = digit1 + digit2 + digit3 + digit4;
-    int led_arr[len_led_arr];
+    init_helper();
 
-    init_led_arr(led_arr, len_led_arr);
+    turn_off_all_leds();
 
-    int index = 0;
+    pwm_start_playback();
+    pwm_timer_start();
 
     while (true)
     {
-        if (is_button_press())
-        {
-            leds_off();
-            nrf_delay_ms(500);
-            blink_led(led_arr[index++]);
-            if (index >= len_led_arr)
-            {
-                nrf_delay_ms(1000);
-                index = 0;
-            }
-        }
-        else
-        {
-            nrf_delay_ms(100);
-        }
+        __WFI();
     }
 }
