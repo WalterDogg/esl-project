@@ -33,6 +33,7 @@ SRC_FILES += \
   $(PROJ_DIR)/button_handler.c \
   $(PROJ_DIR)/led_control.c \
   $(PROJ_DIR)/pwm_control.c \
+  $(PROJ_DIR)/flash_storage.c \
   $(PROJ_DIR)/main.c \
   $(SDK_ROOT)/modules/nrfx/mdk/system_nrf52840.c \
   $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_gpiote.c \
@@ -47,8 +48,8 @@ SRC_FILES += \
   $(SDK_ROOT)/integration/nrfx/legacy/nrf_drv_clock.c \
   $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_clock.c \
   $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_pwm.c \
-  $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_power.c
-
+  $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_power.c \
+  $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_nvmc.c
 # Include folders common to all targets
 INC_FOLDERS += \
   $(SDK_ROOT)/components \
@@ -83,6 +84,7 @@ INC_FOLDERS += \
   $(SDK_ROOT)/components/libraries/usbd \
   $(SDK_ROOT)/components/libraries/log \
   $(SDK_ROOT)/integration/nrfx/legacy \
+  $(SDK_ROOT)/modules/nrfx/drivers/include \
 
 # Libraries common to all targets
 LIB_FILES += \
@@ -112,6 +114,8 @@ CFLAGS += -DNRFX_GPIOTE_ENABLE
 CFLAGS += -DAPP_TIMER_V2
 CFLAGS += -DAPP_TIMER_V2_RTC1_ENABLED
 CFLAGS += -DDEBUG_NRF
+CFLAGS += -DNRFX_NVMC_ENABLED=1
+CFLAGS += -DNVMC_STORAGE_ADDR=0x000FF000
 
 # C++ flags common to all targets
 CXXFLAGS += $(OPT)

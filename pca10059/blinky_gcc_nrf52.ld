@@ -60,5 +60,7 @@ SECTIONS
 
 } INSERT AFTER .text
 
+PROVIDE(__persistent_storage_start = 0x0FF000);
+PROVIDE(__persistent_storage_end   = 0x100000);
 
 INCLUDE "nrf_common.ld"

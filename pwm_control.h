@@ -19,4 +19,4 @@ void pwm_timer_start(void);
 void pwm_start_playback(void);
 void pwm_update_duty_cycle(uint8_t channel, uint32_t duty_cycle);
 
-#endif // PWM_CONTROL_H
+#endif

@@ -26,4 +26,4 @@ void button_interrupt_handler(nrfx_gpiote_pin_t pin, nrf_gpiote_polarity_t actio
 
 void process_button_click(void);
 
-#endif // BUTTON_HANDLER_H
+#endif

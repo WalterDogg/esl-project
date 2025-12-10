@@ -15,22 +15,22 @@
 #define SATURATION_STEP 3
 #define BRIGHTNESS_STEP 3
 
-typedef enum
-{
+typedef enum {
     MODE_AFK,
     MODE_HUE,
     MODE_SATURATION,
     MODE_BRIGHTNESS
 } controller_mode_t;
 
-typedef struct
-{
+typedef struct {
     uint32_t afk_mode;
     uint32_t hue_mode;
     uint32_t saturation_mode;
     uint32_t brightness_mode;
 } steps_mode;
 
+void load_color_from_storage(void);
+void save_current_color_if_needed(void);
 void set_current_mode(void);
 void update_duty_cycle_RGB(void);
 void update_duty_cycle_LED1(void);
@@ -43,4 +43,4 @@ void turn_on_led(int pin);
 void turn_off_led(int pin);
 void turn_off_all_leds(void);
 
-#endif // LED_CONTROL_H
+#endif
